@@ -1,10 +1,10 @@
 import React from 'react'
 import SidebarOption from './SidebarOption'
 import { RiHome7Line, RiHome7Fill, RiFileList2Fill } from 'react-icons/ri'
-import { BiHash } from 'react-icons/bi'
+import { BiHash, BiRocket } from 'react-icons/bi'
 import { FiBell, FiMoreHorizontal } from 'react-icons/fi'
 import { HiOutlineMail, HiMail } from 'react-icons/hi'
-import { FaRegListAlt, FaHashtag, FaBell } from 'react-icons/fa'
+import { FaRegListAlt, FaHashtag, FaBell, FaAsterisk, FaRocket } from 'react-icons/fa'
 import { CgMoreO } from 'react-icons/cg'
 // import Modal from 'react-modal'
 import { useState, useContext } from 'react'
@@ -53,9 +53,9 @@ function SideBar({initialSelectedIcon='Home'}) {
           redirect={'/'}
         />
         <SidebarOption
-          Icon={selected === 'Explore' ? FaHashtag : BiHash}
-          text='Explore'
-          isActive={Boolean(selected === 'Explore')}
+          Icon={selected === 'Pebbles' ? FaRocket : BiRocket}
+          text='Pebbles'
+          isActive={Boolean(selected === 'Pebbles')}
           setSelected={setSelected}
         />
         <SidebarOption
@@ -96,9 +96,9 @@ function SideBar({initialSelectedIcon='Home'}) {
               {/* @{currentAccount.slice(0, 6)}...{currentAccount.slice(39)} */}
             </div>
           </div>
-          <div className={style.moreContainer}>
+          {/* <div className={style.moreContainer}>
             <FiMoreHorizontal />
-          </div>
+          </div> */}
         </div>
       </div>
 
